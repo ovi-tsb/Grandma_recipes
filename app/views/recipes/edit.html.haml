@@ -1,3 +1,6 @@
 %h1 Edit Recipe
+%strong.center Current Image
+%br/
+= image_tag @recipe.image.url(:medium)
 
 = render 'form'
