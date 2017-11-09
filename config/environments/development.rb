@@ -53,4 +53,8 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   # Needed for devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  # paperclip configuration for heroku
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+  
 end
