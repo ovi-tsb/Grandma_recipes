@@ -9,21 +9,32 @@
 %body
   %nav.navbar.navbar-default
     .container
-      .navbar-brand= link_to "Recipe Box", root_path
-
-      - if user_signed_in?
-        %ul.nav.navbar-nav.navbar-right
-          %li= link_to "New Recipe", new_recipe_path
-          %li= link_to "Sign Out", destroy_user_session_path, method: :delete
-          %p
-            Welcome: 
-            = current_user.email
-      - else
-        %ul.nav.navbar-nav.navbar-right
-          %li= link_to "Sing Up", new_user_registration_path
-          %li= link_to "Sing In", new_user_session_path
+      .navbar-header
+        %button.navbar-toggle.collapsed{"data-target" => ".navbar-ex1-collapse", "data-toggle" => "collapse", type: "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .navbar-brand= link_to "Grandma Recipes", root_path
+      .collapse.navbar-collapse.navbar-ex1-collapse
+        - if user_signed_in?
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "Recipes", recipes_path
+            %li= link_to "New Recipe", new_recipe_path
+            %li= link_to "Sign Out", destroy_user_session_path,   method: :delete
+            %p
+              Welcome: 
+              = current_user.email
+        - else
+          %ul.nav.navbar-nav.navbar-right
+            %li= link_to "Sing Up", new_user_registration_path
+            %li= link_to "Sing In", new_user_session_path
   .container
     - flash.each do |name, msg|
       = content_tag :div, msg, class: "alert"
     = yield
-
+  .footer
+    .container
+      %p.text-muted &copy; 2017 Grandma-Recipes
+%script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' }
+%script{ :src => '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js' }
