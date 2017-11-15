@@ -33,8 +33,6 @@
     - flash.each do |name, msg|
       = content_tag :div, msg, class: "alert"
     = yield
-  .footer
-    .container
-      %p.text-muted &copy; 2017 Grandma-Recipes
+  
 %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js' }
 %script{ :src => '//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js' }
