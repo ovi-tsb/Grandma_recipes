@@ -224,13 +224,13 @@ textarea {
     @include box-shadow;
     .image_wrapper {
       min-width: 100%;
-      min-height: 300px;
+      min-height: 200px;
       border-radius: 5px 5px 0 0;
       overflow: hidden; // to hide the image when grow
     }
     img {
       width: 100%;
-      min-height: 300px;
+      min-height: 200px;
       -webkit-transition: all .3s ease-out;
       -moz-transition: all .3s ease-out;
       -o-transition: all .3s ease-out;
@@ -251,8 +251,35 @@ textarea {
     }
   }
   #recipe_info {
+    h1 {
+      font-size: 27px;
+    }
     img {
       margin: 10px 0;
+      width: 100%;
+    }
+  }
+  .navbar {
+    .navbar-brand {
+      font-size: 20px;
+      a {
+        color: $red;
+      }
+    }
+  }
+  .simple_form {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .nested-fields {
+    label {
+      display: none;
+    }
+    .form-button {
+      float: left;
+      width: 30% !important;
+      margin-left: 5%;
+      margin-top: 2px;
     }
   }
 }
