@@ -18,6 +18,7 @@
 
 $break-small: 320px;
 $break-large: 800px;
+$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
 
 @mixin box-shadow {
   -webkit-box-shadow: rgba(0,0,0, 0.09) 0 2px 0;
@@ -219,7 +220,7 @@ textarea {
     }
   }
 }
-@media screen and (max-width: $break-small) { 
+@media (min-width: 480px) and #{$retina} { 
   .recipe {
     background: #fff;
     border-radius: 5px;
