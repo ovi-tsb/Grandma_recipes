@@ -16,10 +16,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-$break-small: 320px;
-$break-large: 800px;
-$retina: "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
-
 @mixin box-shadow {
   -webkit-box-shadow: rgba(0,0,0, 0.09) 0 2px 0;
   -moz-box-shadow: rgba(0,0,0, 0.09) 0 2px 0;
@@ -185,7 +181,7 @@ textarea {
 .btn-default {
   margin-bottom: 40px;
 }
-@media screen and (min-width: $break-large) { 
+@media (min-width: 550px) and (max-width: 770px) { 
 .recipe {
   background: #fff;
   border-radius: 5px;
@@ -220,7 +216,7 @@ textarea {
     }
   }
 }
-@media (min-width: 480px) and #{$retina} { 
+@media (max-width: 550px) { 
   .recipe {
     background: #fff;
     border-radius: 5px;
